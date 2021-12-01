@@ -1,0 +1,117 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'interface.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+from settings import *
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName(TITLE)
+        MainWindow.setWindowIcon(QtGui.QIcon('icon_t.png'))
+        MainWindow.resize(800, 445)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.Do = QtWidgets.QGroupBox(self.centralwidget)
+        self.Do.setGeometry(QtCore.QRect(180, 230, 440, 80))
+        self.Do.setObjectName("Do")
+        self.MjesecDo = QtWidgets.QComboBox(self.Do)
+        self.MjesecDo.setGeometry(QtCore.QRect(140, 27, 150, 26))
+        self.MjesecDo.setObjectName("MjesecDo")
+        self.MjesecDo.addItem("")
+        self.MjesecDo.addItem("")
+        self.DanDo = QtWidgets.QSpinBox(self.Do)
+        self.DanDo.setGeometry(QtCore.QRect(10, 27, 100, 26))
+        self.DanDo.setMinimum(1)
+        self.DanDo.setMaximum(31)
+        self.DanDo.setObjectName("DanDo")
+        self.GodinaDo = QtWidgets.QSpinBox(self.Do)
+        self.GodinaDo.setGeometry(QtCore.QRect(320, 27, 100, 26))
+        self.GodinaDo.setMinimum(2008)
+        self.GodinaDo.setMaximum(2017)
+        self.GodinaDo.setObjectName("GodinaDo")
+        self.Od = QtWidgets.QGroupBox(self.centralwidget)
+        self.Od.setGeometry(QtCore.QRect(180, 130, 440, 80))
+        self.Od.setObjectName("Od")
+        self.DanOd = QtWidgets.QSpinBox(self.Od)
+        self.DanOd.setEnabled(True)
+        self.DanOd.setGeometry(QtCore.QRect(10, 27, 100, 26))
+        self.DanOd.setMinimum(1)
+        self.DanOd.setMaximum(31)
+        self.DanOd.setObjectName("DanOd")
+        self.MjesecOd = QtWidgets.QComboBox(self.Od)
+        self.MjesecOd.setGeometry(QtCore.QRect(140, 27, 150, 26))
+        self.MjesecOd.setObjectName("MjesecOd")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.MjesecOd.addItem("")
+        self.GodinaOd = QtWidgets.QSpinBox(self.Od)
+        self.GodinaOd.setGeometry(QtCore.QRect(320, 27, 100, 26))
+        self.GodinaOd.setMinimum(2008)
+        self.GodinaOd.setMaximum(2017)
+        self.GodinaOd.setObjectName("GodinaOd")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(250, 50, 300, 30))
+        self.label.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(335, 360, 130, 35))
+        self.pushButton.setObjectName("pushButton")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 31))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate(TITLE, TITLE))
+        self.Do.setTitle(_translate("MainWindow", "Do"))
+        self.MjesecDo.setItemText(0, _translate("MainWindow", "Siječanj"))
+        self.MjesecDo.setItemText(1, _translate("MainWindow", "Veljača"))
+        self.Od.setTitle(_translate("MainWindow", "Od"))
+        self.MjesecOd.setItemText(0, _translate("MainWindow", "Siječanj"))
+        self.MjesecOd.setItemText(1, _translate("MainWindow", "Veljača"))
+        self.MjesecOd.setItemText(2, _translate("MainWindow", "Ožujak"))
+        self.MjesecOd.setItemText(3, _translate("MainWindow", "Travanj"))
+        self.MjesecOd.setItemText(4, _translate("MainWindow", "Svibanj"))
+        self.MjesecOd.setItemText(5, _translate("MainWindow", "Lipanj"))
+        self.MjesecOd.setItemText(6, _translate("MainWindow", "Srpanj"))
+        self.MjesecOd.setItemText(7, _translate("MainWindow", "Kolovoz"))
+        self.MjesecOd.setItemText(8, _translate("MainWindow", "Rujan"))
+        self.MjesecOd.setItemText(9, _translate("MainWindow", "Listopad"))
+        self.MjesecOd.setItemText(10, _translate("MainWindow", "Studeni"))
+        self.MjesecOd.setItemText(11, _translate("MainWindow", "Prosinac"))
+        self.label.setText(_translate("MainWindow", "Odaberite raspon prikaza podataka"))
+        self.pushButton.setText(_translate("MainWindow", "Generiraj"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+
