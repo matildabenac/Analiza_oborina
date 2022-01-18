@@ -1,6 +1,7 @@
 import numpy
 import numpy as np
 import pandas as pd
+import operator
 
 
 def load_dataset(filename):
@@ -56,8 +57,41 @@ def get_year_month_sum(dataset, year, month):
 
     return msum
 
-# caseovi:
-# suma za mjesec al za sve godine
-# suma svih padalina za sve godine
-# pogledaj dalje..
 
+def get_year_max_day(dataset, year):
+    max_month, max_day = (1, 1)
+
+    for month in range(1, 13):
+        for day in dataset[year][month]:
+
+            if dataset[year][month][day] > dataset[year][max_month][max_day]:
+                max_month, max_day = (month, day)
+
+    return max_month, max_day, dataset[year][max_month][max_day]
+
+
+def get_year_max_month(dataset, year):
+    max_month = 1
+    max_month_val = 0
+
+    for month in range(1, 13):
+        month_val = get_year_month_sum(dataset, year, month)
+
+        if month_val > max_month_val:
+            max_month = month
+            max_month_val = month_val
+
+    return max_month, max_month_val
+
+
+def get_year_month_max_day(dataset, year, month):
+    max_day = 1
+
+    for day in dataset[year][month]:
+        if dataset[year][month][day] > dataset[year][month][max_day]:
+            max_day = day
+
+    return max_day, dataset[year][month][max_day]
+
+
+# def get_data_from_to_date(dataset, from_year, from_month = 1, from_day = 1, to_year = 2017, to_month = 12, to_day = 31):
