@@ -50,7 +50,18 @@ def get_year_sum(dataset, year):
     return ysum
 
 
-def get_year_month_sum(dataset, year, month):
+def get_sum_by_years(dataset, from_year = 2008, to_year = 2017):
+    if from_year < 2008: from_year = 2008
+    if to_year > 2017: to_year = 2017
+
+    sums = []
+    for year in range(from_year, to_year+1):
+        sums.append(get_year_sum(dataset, year))
+
+    return sums
+
+
+def get_month_sum(dataset, year, month):
     mdict = dataset.get(year).get(month)
 
     msum = sum(mdict.values())
@@ -58,7 +69,15 @@ def get_year_month_sum(dataset, year, month):
     return msum
 
 
-def get_year_max_day(dataset, year):
+def get_year_sums_by_months(dataset, year):
+    sums = []
+    for month in dataset[year]:
+        sums.append(get_month_sum(dataset, year, month))
+
+    return sums
+
+
+def get_max_day_in_year(dataset, year):
     max_month, max_day = (1, 1)
 
     for month in range(1, 13):
@@ -70,12 +89,12 @@ def get_year_max_day(dataset, year):
     return max_month, max_day, dataset[year][max_month][max_day]
 
 
-def get_year_max_month(dataset, year):
+def get_max_month_in_year(dataset, year):
     max_month = 1
     max_month_val = 0
 
     for month in range(1, 13):
-        month_val = get_year_month_sum(dataset, year, month)
+        month_val = get_month_sum(dataset, year, month)
 
         if month_val > max_month_val:
             max_month = month
@@ -84,7 +103,7 @@ def get_year_max_month(dataset, year):
     return max_month, max_month_val
 
 
-def get_year_month_max_day(dataset, year, month):
+def get_max_day_in_month(dataset, year, month):
     max_day = 1
 
     for day in dataset[year][month]:
