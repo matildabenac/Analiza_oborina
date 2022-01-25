@@ -4,7 +4,12 @@ import pandas as pd
 import operator
 
 
-def load_dataset(filename):
+datasets = {}
+
+# TODO: change sending dataset in fucntion to sending dataset name
+
+
+def load_dataset(filename, dataset_name):
     # get dataframes
     df = pd.read_csv(filename)
     df = df.drop(['G'], axis=1)
@@ -37,7 +42,17 @@ def load_dataset(filename):
 
         data.update({year: ydict})
 
+    global datasets
+    datasets[dataset_name] = data
+
     return data
+
+
+def get_day_value(dataset_name, day, month, year):
+    global datasets
+
+    dataset = datasets[dataset_name]
+    return dataset[year][month][day]
 
 
 def get_year_sum(dataset, year):

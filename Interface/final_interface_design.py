@@ -8,6 +8,8 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from final_graph_data_design import Ui_GraphWindow
+import data_operations as do
+
 
 class Ui_OptionsWindow(object):
     def setupUi(self, OptionsWindow):
@@ -400,9 +402,24 @@ class Ui_OptionsWindow(object):
         self.confirmButton.setText(_translate("OptionsWindow", "Prikaži podatke"))
        
     def openDataWindow(self):
+        if self.checkBox.isChecked():
+            grad = self.checkBox.text()
+            do.load_dataset("../data/Rijeka.csv", grad)
+        if self.checkBox_2.isChecked():
+            grad = self.checkBox_2.text()
+            do.load_dataset("../data/Marcelji.csv", grad)
+        if self.checkBox_3.isChecked():
+            grad = self.checkBox_3.text()
+            do.load_dataset("../data/Matulji.csv", grad)
+
+        if self.danRadio.isChecked():
+            datum = self.pickDan.text().split('.')
+            value = do.get_day_value(grad, int(datum[0]), int(datum[1]), int(datum[2]))
+
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_GraphWindow()
         self.ui.setupUi(self.window)
+        self.ui.label_2.setText(str(value))
         self.window.show()
 
 
