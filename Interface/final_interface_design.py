@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from final_graph_data_design import Ui_GraphWindow
 
 class Ui_OptionsWindow(object):
     def setupUi(self, OptionsWindow):
@@ -319,7 +320,7 @@ class Ui_OptionsWindow(object):
         self.label_5.setObjectName("label_5")
         self.gridLayout_2.addWidget(self.label_5, 0, 2, 1, 1)
         self.gridLayout.addLayout(self.gridLayout_2, 11, 0, 1, 1)
-        self.confirmButton = QtWidgets.QPushButton(self.centralwidget)
+        self.confirmButton = QtWidgets.QPushButton(self.centralwidget, clicked = lambda: self.openDataWindow())
         self.confirmButton.setGeometry(QtCore.QRect(350, 580, 150, 35))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -397,6 +398,12 @@ class Ui_OptionsWindow(object):
         self.label_4.setText(_translate("OptionsWindow", "Mjesec"))
         self.label_5.setText(_translate("OptionsWindow", "Godina"))
         self.confirmButton.setText(_translate("OptionsWindow", "Prikaži podatke"))
+       
+    def openDataWindow(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_GraphWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
 
 
 if __name__ == "__main__":
