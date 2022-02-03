@@ -1,6 +1,25 @@
 import matplotlib.pyplot as plt
-import numpy
+import numpy as np
 import data_operations as do
+from calendar import monthrange
+
+
+def month_plot(dataset_name, month, year):
+    num = monthrange(year, month)
+    days = range(1, num[1]+1)
+    values = []
+
+    for day in days:
+        values.append(do.get_day_value(dataset_name, day, month, year))
+
+    return days, values
+
+
+def year_plot(dataset, year):
+    months = range(1, 13)
+    sums = do.get_year_sums_by_months(dataset, year)
+
+    return months, sums
 
 
 # - mjesečne sume padalina
