@@ -128,4 +128,32 @@ def get_max_day_in_month(dataset, year, month):
     return max_day, dataset[year][month][max_day]
 
 
-# def get_data_from_to_date(dataset, from_year, from_month = 1, from_day = 1, to_year = 2017, to_month = 12, to_day = 31):
+def get_data_from_to_date(dataset, from_year, from_month = 1, from_day = 1, to_year = 2017, to_month = 12, to_day = 31):
+    dates = []
+    values = []
+
+    for year in range(from_year, to_year+1):
+        if year == from_year:
+            begin_month = from_month
+        else:
+            begin_month = 1
+        if year == to_year:
+            end_month = to_month
+        else:
+            end_month = 12
+
+        for month in range(begin_month, end_month+1):
+            if year == from_year and month == from_month:
+                begin_day = from_day
+            else:
+                begin_day = 1
+            if year == to_year and month == to_month:
+                end_day = to_day
+            else:
+                end_day = len(dataset[year][month])
+
+            for day in range(begin_day, end_day+1):
+                dates.append(str(day) + "." + str(month) + "." + str(year) + ".")
+                values.append(dataset[year][month][day])
+
+    return dates, values

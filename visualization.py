@@ -146,7 +146,13 @@ def visualize_comparison_by_year(dataset1, year1, dataset2, year2):
 
 
 # - prikaz proizvoljnog raspona
-# TODO
+def visualize_range(dataset, from_year, from_month, from_day, to_year, to_month, to_day):
+    dates, values = do.get_data_from_to_date(dataset, from_year, from_month, from_day, to_year, to_month, to_day)
+
+    plt.plot(dates, values)
+
+    plt.show();
+
 
 # - sumarna razlika po odabranom periodu
 # TODO
