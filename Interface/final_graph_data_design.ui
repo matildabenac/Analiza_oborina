@@ -87,7 +87,7 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="valueYsum">
        <property name="text">
         <string>50</string>
        </property>
@@ -113,7 +113,7 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLabel" name="label_6">
+      <widget class="QLabel" name="valueMmax">
        <property name="text">
         <string>100</string>
        </property>
@@ -139,14 +139,14 @@
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QLabel" name="label_8">
+      <widget class="QLabel" name="valueYmax">
        <property name="text">
         <string>500</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="valueMSum">
        <property name="text">
         <string>20</string>
        </property>
@@ -166,7 +166,7 @@
       </widget>
      </item>
      <item row="5" column="1">
-      <widget class="QLabel" name="label_10">
+      <widget class="QLabel" name="valueDif">
        <property name="text">
         <string>25</string>
        </property>

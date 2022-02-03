@@ -34,7 +34,7 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="CentralWidget">
    <widget class="QGroupBox" name="gradoviBox">
     <property name="geometry">
      <rect>
@@ -73,7 +73,7 @@
        <height>161</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QVBoxLayout" name="gradoviChecksLayout">
       <property name="spacing">
        <number>0</number>
       </property>
@@ -81,7 +81,7 @@
        <number>20</number>
       </property>
       <item>
-       <widget class="QCheckBox" name="checkBox">
+       <widget class="QCheckBox" name="checkBoxRijeka">
         <property name="font">
          <font>
           <pointsize>8</pointsize>
@@ -95,7 +95,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox_2">
+       <widget class="QCheckBox" name="checkBoxMarcelji">
         <property name="font">
          <font>
           <pointsize>8</pointsize>
@@ -109,7 +109,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox_3">
+       <widget class="QCheckBox" name="checkBoxMatulji">
         <property name="font">
          <font>
           <pointsize>8</pointsize>
@@ -156,7 +156,7 @@
        <height>430</height>
       </rect>
      </property>
-     <layout class="QGridLayout" name="gridLayout" columnstretch="0,0">
+     <layout class="QGridLayout" name="vrijemeGridLayout" columnstretch="0">
       <property name="leftMargin">
        <number>0</number>
       </property>
@@ -176,7 +176,7 @@
        <number>10</number>
       </property>
       <item row="3" column="0">
-       <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <layout class="QHBoxLayout" name="pickDanHL">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -257,7 +257,7 @@
        </widget>
       </item>
       <item row="9" column="0">
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <layout class="QHBoxLayout" name="pickRasponHL">
         <property name="spacing">
          <number>10</number>
         </property>
@@ -268,7 +268,7 @@
          <number>15</number>
         </property>
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="odLabel">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -311,7 +311,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_2">
+         <widget class="QLabel" name="doLabel">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -356,7 +356,7 @@
        </layout>
       </item>
       <item row="7" column="0">
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <layout class="QHBoxLayout" name="pickGodinaHL">
         <property name="leftMargin">
          <number>40</number>
         </property>
@@ -388,7 +388,7 @@
        </layout>
       </item>
       <item row="5" column="0">
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <layout class="QHBoxLayout" name="pickMjesecHL">
         <property name="spacing">
          <number>25</number>
         </property>
@@ -453,7 +453,7 @@
        </widget>
       </item>
       <item row="10" column="0">
-       <widget class="QRadioButton" name="radioButton">
+       <widget class="QRadioButton" name="usporedbaRadio">
         <property name="font">
          <font>
           <pointsize>8</pointsize>
@@ -467,7 +467,7 @@
        </widget>
       </item>
       <item row="11" column="0">
-       <layout class="QGridLayout" name="gridLayout_2">
+       <layout class="QGridLayout" name="usporedbaGL">
         <property name="leftMargin">
          <number>40</number>
         </property>
@@ -475,7 +475,7 @@
          <number>10</number>
         </property>
         <item row="1" column="1">
-         <widget class="QSpinBox" name="spinBox_2">
+         <widget class="QSpinBox" name="usporedbaMjesecPrvi">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -492,7 +492,7 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QComboBox" name="comboBox_2">
+         <widget class="QComboBox" name="usporedbaGodinaDrugi">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -511,7 +511,7 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QComboBox" name="comboBox">
+         <widget class="QComboBox" name="usporedbaGodinaPrvi">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -530,7 +530,7 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QSpinBox" name="spinBox">
+         <widget class="QSpinBox" name="usporedbaDanPrvi">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -550,7 +550,7 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QSpinBox" name="spinBox_3">
+         <widget class="QSpinBox" name="usporedbaMjesecDrugi">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -567,7 +567,7 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QSpinBox" name="spinBox_4">
+         <widget class="QSpinBox" name="usporedbaDanDrugi">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -587,7 +587,7 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_3">
+         <widget class="QLabel" name="usporedbaDanLabel">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -610,7 +610,7 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="usporedbaLabelMjesec">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -633,7 +633,7 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QLabel" name="label_5">
+         <widget class="QLabel" name="usporedbaLabelGodina">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -709,9 +709,9 @@
   <tabstop>mjesecRadio</tabstop>
   <tabstop>godinaRadio</tabstop>
   <tabstop>rasponRadio</tabstop>
-  <tabstop>checkBox</tabstop>
-  <tabstop>checkBox_2</tabstop>
-  <tabstop>checkBox_3</tabstop>
+  <tabstop>checkBoxRijeka</tabstop>
+  <tabstop>checkBoxMarcelji</tabstop>
+  <tabstop>checkBoxMatulji</tabstop>
   <tabstop>pickDan</tabstop>
   <tabstop>pickMjesecMjesec</tabstop>
   <tabstop>pickMjesecGodina</tabstop>
@@ -788,7 +788,7 @@
   <connection>
    <sender>rasponRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label</receiver>
+   <receiver>odLabel</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -820,7 +820,7 @@
   <connection>
    <sender>rasponRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_2</receiver>
+   <receiver>doLabel</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -850,9 +850,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>usporedbaRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>spinBox</receiver>
+   <receiver>usporedbaDanPrvi</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -866,9 +866,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>usporedbaRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>spinBox_2</receiver>
+   <receiver>usporedbaMjesecPrvi</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -882,9 +882,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>usporedbaRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>comboBox</receiver>
+   <receiver>usporedbaGodinaPrvi</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -898,9 +898,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>usporedbaRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>spinBox_4</receiver>
+   <receiver>usporedbaDanDrugi</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -914,9 +914,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>usporedbaRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>spinBox_3</receiver>
+   <receiver>usporedbaMjesecDrugi</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -930,9 +930,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>usporedbaRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>comboBox_2</receiver>
+   <receiver>usporedbaGodinaDrugi</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -946,9 +946,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>usporedbaRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_3</receiver>
+   <receiver>usporedbaDanLabel</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -962,9 +962,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>usporedbaRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_4</receiver>
+   <receiver>usporedbaLabelMjesec</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -978,9 +978,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>radioButton</sender>
+   <sender>usporedbaRadio</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_5</receiver>
+   <receiver>usporedbaLabelGodina</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
