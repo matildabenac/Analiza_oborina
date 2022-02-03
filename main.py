@@ -18,8 +18,10 @@ def main():
     # vis.visualize_sum_comparison_by_month(rijeka_data, 2010, 1, marcelji_data, 2011, 1)
     # vis.visualize_comparison_by_year(matulji_data, 2008, matulji_data, 2017)
     # vis.visualize_sum_comparison_by_year(matulji_data, 2008, matulji_data, 2017)
-    vis.visualize_range(rijeka_data, 2008, 1, 1, 2010, 2, 12)
+    # vis.visualize_range(rijeka_data, 2008, 1, 1, 2010, 2, 12)
 
+    print(do.get_range_sum(rijeka_data, 2008, 1, 1, 2010, 2, 12))
+    print(do.get_range_max_day(rijeka_data, 2008, 1, 1, 2010, 2, 12))
 
 
 # Press the green button in the gutter to run the script.
