@@ -295,7 +295,7 @@ class Ui_GraphWindow(object):
 
     def retranslateUi(self, GraphWindow):
         _translate = QtCore.QCoreApplication.translate
-        GraphWindow.setWindowTitle(_translate("GraphWindow", "MainWindow"))
+        GraphWindow.setWindowTitle(_translate("GraphWindow", "Analiza oborina"))
         self.labelDay.setText(_translate("GraphWindow", "Day value:"))
 
         self.labelMmax.setText(_translate("GraphWindow", "Month max day:"))
