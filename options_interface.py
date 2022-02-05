@@ -475,7 +475,7 @@ class Ui_OptionsWindow(object):
 
     def retranslateUi(self, OptionsWindow):
         _translate = QtCore.QCoreApplication.translate
-        OptionsWindow.setWindowTitle(_translate("OptionsWindow", "MainWindow"))
+        OptionsWindow.setWindowTitle(_translate("OptionsWindow", "Analiza oborina"))
         self.gradoviBox.setTitle(_translate("OptionsWindow", "Gradovi"))
         self.checkBoxRijeka.setText(_translate("OptionsWindow", "Rijeka"))
         self.checkBoxMarcelji.setText(_translate("OptionsWindow", "Marčelji"))
